@@ -5,8 +5,6 @@ var body = document.getElementById("gradient");
 var random = document.getElementById('button');
 
 
-
-
 setGradient();
 
 
@@ -21,6 +19,7 @@ function setGradient() {
 	css.textContent = body.style.background + ";";
 }
 
+
 function randomColor() {
 	var rannumber1=Math.floor(Math.random() * 256 );
 	var rannumber2=Math.floor(Math.random() * 256 );
@@ -30,21 +29,15 @@ function randomColor() {
 	var rannumber5=Math.floor(Math.random() * 256 );
 	var rannumber6=Math.floor(Math.random() * 256 );
 	var ranrgb2="rgb("+rannumber4+","+rannumber5+","+rannumber6+")";
-
 	
-	
-
 	body.style.background = "linear-gradient(to right, " 
 	+ ranrgb1 
 	+ ", " 
 	+ ranrgb2
-	+ ")";
+	+ ")"; 
 
 	css.textContent = body.style.background;
-
-	//this seems to work but need to convert rgb to hex
-	//color1.value = ranrgb1;
-}
+} 
 
 color1.addEventListener("input", setGradient);
 
